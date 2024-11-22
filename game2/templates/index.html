@@ -14,9 +14,16 @@
         <p>Points: <span id="score">0</span></p>
         <p>Time left: <span id="timer">30</span> seconds</p>
         <p id="message"></p>
+
+        <!-- Leaderboard Section -->
+        <h2>Leaderboard</h2>
+        <ul id="leaderboard">
+            {% for entry in leaderboard %}
+                <li>Score: {{ entry.score }}</li>
+            {% endfor %}
+        </ul>
     </div>
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
-
