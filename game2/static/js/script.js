@@ -44,38 +44,15 @@ const startTimer = () => {
             messageElement.textContent = `Game Over! Your final score is: ${score}`;
             isGameOver = true;
 
-<<<<<<< HEAD
             // Only show the name input modal if the score is greater than zero and auto-clicker wasn't detected
             if (score > 0) {
                 nameModal.style.display = 'block';
             }
-=======
-            // Send the score to the server when the game is over
-            saveScore(score);
->>>>>>> ab91ca5e33e85d591b6c379f72ee655c17e12517
         } else {
             timeLeft--;
             timerElement.textContent = timeLeft;
         }
     }, 1000);
-};
-
-// Function to save score to the database using Flask
-const saveScore = (score) => {
-    fetch('/save_score', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ score: score })
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data.message);
-    })
-    .catch(error => {
-        console.error('Error saving score:', error);
-    });
 };
 
 // Start the timer as soon as the game starts

@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Infinite Clicker</title>
+    
+    <!-- Add favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='img/logo.ico') }}" type="image/x-icon" />
+    
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/style.css') }}"
@@ -38,28 +42,6 @@
           <button type="submit" id="submit-name">Submit</button>
         </form>
       </div>
-        <h1>Infinite Clicker</h1>
-        <p>Click the button as many times as you can before time runs out!</p>
-        <button id="click-button">Hit Me!</button>
-        <p>Points: <span id="score">0</span></p>
-        <p>Time left: <span id="timer">30</span> seconds</p>
-        <p id="message"></p>
-
-        <!-- Leaderboard Section -->
-        <h2>Leaderboard</h2>
-        <ul id="leaderboard">
-            {% for entry in leaderboard %}
-                <li>Score: {{ entry.score }}</li>
-            {% endfor %}
-        </ul>
-
-        <!-- Leaderboard Section -->
-        <h2>Leaderboard</h2>
-        <ul id="leaderboard">
-            {% for entry in leaderboard %}
-                <li>Score: {{ entry.score }}</li>
-            {% endfor %}
-        </ul>
     </div>
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
