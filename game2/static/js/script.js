@@ -34,3 +34,5 @@ startTimer();
 
 // Event listener for clicking the button
 clickButton.addEventListener('click', updateScore);
+
+// L5Y3QNXvjvkAfAKY leander
